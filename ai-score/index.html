@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Readiness Score — Samuel Callahan</title>
+  <meta name="description" content="Take the 2-minute AI Readiness quiz. See exactly where your business is losing time and money to manual work — and what to automate first.">
+  <link rel="stylesheet" href="/assets/brand.css">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <main id="funnel">
+
+    <!-- State 1: Hero -->
+    <section id="hero" class="state">
+      <h1>How much of your business runs by hand that shouldn't?</h1>
+      <p class="lede">Take the 2-minute AI Readiness quiz. Get a score across the four places small businesses lose the most time — and see exactly where you'd get yours back.</p>
+      <ul class="proof-points">
+        <li><strong>Find the hours.</strong> Most owners spend 10+ hours a week on work a machine should be doing. The quiz shows you where yours go.</li>
+        <li><strong>No jargon.</strong> A plain-language read on where AI actually helps a business like yours — not hype, not a sales pitch dressed as a quiz.</li>
+        <li><strong>Free and instant.</strong> Your score and full category breakdown render on screen the moment you finish.</li>
+      </ul>
+      <button id="start-quiz" class="btn-primary">Get your AI Readiness Score — 2 minutes, free</button>
+    </section>
+
+    <!-- State 2: Quiz -->
+    <section id="quiz" class="state" hidden>
+      <div class="progress-track" aria-hidden="true"><div id="progress-fill" class="progress-fill"></div></div>
+      <p id="progress-label" class="progress-label"></p>
+      <p id="question-category" class="question-category"></p>
+      <h3 id="question-text"></h3>
+      <div id="answers" class="answers"></div>
+      <button id="back" class="btn-ghost" hidden>&larr; Back</button>
+    </section>
+
+    <!-- State 3: Email gate -->
+    <section id="gate" class="state" hidden>
+      <h2>Your score is ready.</h2>
+      <p class="lede">Where should I send your breakdown? You'll also see it on screen right now.</p>
+      <form id="gate-form" novalidate>
+        <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required>
+        <button type="submit" class="btn-primary">Show me my score</button>
+        <p id="email-error" class="field-error" hidden>That doesn't look like an email address — mind checking it?</p>
+      </form>
+      <p><small>No spam. Your results, and at most an occasional note from me.</small></p>
+    </section>
+
+    <!-- State 4: Results -->
+    <section id="results" class="state" hidden>
+      <p class="results-kicker">Your AI Readiness Score</p>
+      <div class="score-circle"><span id="overall-score"></span><span class="score-denominator">/100</span></div>
+      <h2 id="band-label"></h2>
+      <p id="band-copy" class="lede"></p>
+
+      <div id="category-results"></div>
+
+      <div id="opportunity" class="opportunity">
+        <p class="results-kicker">Your #1 opportunity</p>
+        <h3 id="opportunity-name"></h3>
+        <p>This is the lowest-scoring area of your business — and usually the one where a focused automation returns the most time or revenue per dollar spent.</p>
+      </div>
+
+      <div class="cta-block">
+        <h3>Want the specifics?</h3>
+        <p>Book a free 30-minute walkthrough. I'll go through your results with you and show you the two or three automations worth building first — what they'd do, what they'd cost, and what they'd save you.</p>
+        <a class="btn-primary" href="https://calendly.com/samuel-l-callahan/30min" target="_blank" rel="noopener">Book your free walkthrough</a>
+        <p><small>No obligation. Worst case, you leave with a clear picture of your own business.</small></p>
+      </div>
+    </section>
+
+  </main>
+
+  <noscript>
+    <p class="noscript-note">This quiz needs JavaScript to run. Enable it, or email me directly: <a href="mailto:samuel.l.callahan@gmail.com">samuel.l.callahan@gmail.com</a></p>
+  </noscript>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

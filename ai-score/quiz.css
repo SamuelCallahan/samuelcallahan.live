@@ -1,0 +1,255 @@
+/* Funnel-specific layout on top of /assets/brand.css. Deliberately minimal — design pass comes later. */
+
+html, body {
+  margin: 0;
+}
+
+#funnel {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+.lede {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Hero */
+#hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.21rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.proof-points {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.proof-points li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--secondary);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--background);
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.75rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.92);
+}
+
+.btn-ghost {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
+}
+
+/* Quiz */
+.progress-track {
+  height: 6px;
+  background: #eee4e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0;
+  transition: width 0.25s ease;
+}
+
+.progress-label {
+  margin: 0 0 2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.question-category {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin: 0 0 0.25rem;
+}
+
+#question-text {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.369rem);
+  line-height: 1.2;
+}
+
+.answers {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.answer {
+  text-align: left;
+  background: var(--background);
+  border: 2px solid #e8ddd8;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.answer:hover {
+  border-color: var(--primary);
+  background: #fdf3ef;
+}
+
+/* Email gate */
+#gate-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+#email {
+  flex: 1 1 16rem;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  border: 2px solid #e8ddd8;
+  border-radius: 6px;
+}
+
+#email:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.field-error {
+  width: 100%;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* Results */
+.results-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.score-circle {
+  font-family: 'IM Fell Great Primer', Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.score-denominator {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+#band-label {
+  margin: 0 0 0.5rem;
+}
+
+#category-results {
+  margin: 3rem 0;
+}
+
+.category-block {
+  margin-bottom: 2rem;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.category-header h4 {
+  margin: 0;
+}
+
+.category-score {
+  font-size: 1.1rem;
+}
+
+.bar-track {
+  height: 10px;
+  background: #eee4e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--secondary);
+  border-radius: 5px;
+}
+
+.category-block p {
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+.opportunity {
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.opportunity h3 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.opportunity p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-block {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e8ddd8;
+}
+
+.cta-block p {
+  line-height: 1.5;
+}
+
+.cta-block .btn-primary {
+  margin: 0.75rem 0;
+}
+
+.noscript-note {
+  max-width: 42rem;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  text-align: center;
+}
